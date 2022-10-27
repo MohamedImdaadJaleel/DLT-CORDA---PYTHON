@@ -73,7 +73,6 @@ highest_length_index = commentList.index(highest_length)
 # passing the maximum comment list's index to trade comment list array to display the comment
 longest_comment = trade_commentList[highest_length_index]
 
-# print(buy_tradeList)
 unique(buy_tradeList, sell_tradeList)
 
 # combining all buyers and sellers of trades and extended trades and finding the unique traders via numpy
