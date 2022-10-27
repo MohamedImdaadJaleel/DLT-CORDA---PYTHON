@@ -20,7 +20,7 @@ int(sell_quantity2)
 sell1 = calculate_order(sell_order_1, sell_quantity1)
 sell2 = calculate_order(sell_order_2, sell_quantity2)
 Total_Sell_Order = sell1 + sell2
-print(Total_Sell_Order)
+
 
 # Buy Trade Orders
 
@@ -55,7 +55,7 @@ buy_quantity_ext = float(extended_trade.buy_quantity1)
 int(buy_quantity_ext)
 
 buy_ext = calculate_order(buy_order_ext, buy_quantity_ext)
-print(buy_ext)
+
 
 # Addition of Extended Trade and Trade buy orders and sell orders
 Total_Buy = Total_Buy_Order + buy_ext

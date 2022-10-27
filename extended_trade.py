@@ -1,13 +1,17 @@
 import csv
 import numpy as np
 
-with open('ExtendedTrade.csv') as file:
+
+filename = input("Enter Name Of Extended Trade file: ")
+
+with open(filename) as file:
     extended_trade_reader = csv.DictReader(file)
     buy_tradeList = []
     sell_tradeList = []
     time_List = []
     total_amount_list = []
     total_quantity_list = []
+    item_id_List = []
     e_trade_count = 0;
 
     for row in extended_trade_reader:
@@ -20,12 +24,14 @@ with open('ExtendedTrade.csv') as file:
         order_amount = row['Price']
         order_quantity = row['Quantity']
 
+        item_id = row['ItemID']
+        item_id_List.append(item_id)
+
         total_amount_list.append(order_amount)
         total_quantity_list.append(order_quantity)
 
         buy_tradeList.append(buy_trades)
         sell_tradeList.append(sell_trades)
-
 
 # combining the buyers and sellers of the extended trade to import this variable in trade.py
 extended_traders_combined = np.concatenate((buy_tradeList, sell_tradeList))

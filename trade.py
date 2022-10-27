@@ -1,11 +1,9 @@
-from datetime import datetime
 import csv
-
 import numpy as np
-
 import extended_trade
 
-with open('GeneralTrade.csv') as file:
+filename = input("Enter Name Of General Trade file: ")
+with open(filename) as file:
     trade_reader = csv.DictReader(file)
 
     commentList = []
@@ -18,6 +16,7 @@ with open('GeneralTrade.csv') as file:
     unique_sell_list = []
     total_amount_list = []
     total_quantity_list = []
+    item_id_List = []
 
     trade_count = 0
 
@@ -35,6 +34,9 @@ with open('GeneralTrade.csv') as file:
 
         time = row['File Date']
         time_List.append(time)
+
+        item_id = row['ItemID']
+        item_id_List.append(item_id)
 
         order_amount = row['Price']
         order_quantity = row['Quantity']
@@ -94,3 +96,4 @@ buy_order1 = total_amount_list[1]
 buy_order2 = total_amount_list[2]
 buy_quantity1 = total_quantity_list[1]
 buy_quantity2 = total_quantity_list[2]
+
