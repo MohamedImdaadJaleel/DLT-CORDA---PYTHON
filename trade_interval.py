@@ -3,7 +3,7 @@ import extended_trade
 import trade
 
 # convert time string to datetime
-# Extended Trade : Trade Interval
+# Trade : Trade Interval
 time_start = datetime.strptime(trade.final_start_time, "%H:%M:%S.%f")
 time_end = datetime.strptime(trade.final_end_time, "%H:%M:%S.%f")
 time_difference = time_end - time_start

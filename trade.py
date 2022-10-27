@@ -96,4 +96,3 @@ buy_order1 = total_amount_list[1]
 buy_order2 = total_amount_list[2]
 buy_quantity1 = total_quantity_list[1]
 buy_quantity2 = total_quantity_list[2]
-
