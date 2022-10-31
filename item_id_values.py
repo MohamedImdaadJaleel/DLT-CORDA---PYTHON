@@ -44,10 +44,10 @@ int(buy_quantity2)
 buy1 = calc_item_value(buy_order_1, buy_quantity1)
 buy2 = calc_item_value(buy_order_2, buy_quantity2)
 Total_Buy_Order = buy1 + buy2
-
-trade_item_id_2 = str(trade.item_id_List[1]) + ": " + str(buy1)
-trade_item_id_3 = str(trade.item_id_List[2]) + ": " + str(buy2)
-sum_trade2_3 = str(trade.item_id_List[2]) + " Total Value: " + str(Total_Buy_Order)
+format(Total_Buy_Order)
+trade_item_id_2 = str(trade.item_id_List[1]) + " Total Value: " + str(buy1)
+trade_item_id_3 = str(trade.item_id_List[2]) + " Total Value: " + str(buy2)
+sum_trade2_3 = str(trade.item_id_List[2]) + " Total Value: {0:.3f}".format(Total_Buy_Order)
 
 # CYB0T800M101 - Item ID
 
@@ -67,8 +67,8 @@ int(sell_quantity2)
 sell1 = calc_item_value(sell_order_1, sell_quantity1)
 sell2 = calc_item_value(sell_order_2, sell_quantity2)
 
-trade_item_id_1 = str(trade.item_id_List[0]) + ": " + str(sell1)
-trade_item_id_4 = str(trade.item_id_List[3]) + ": " + str(sell2)
+trade_item_id_1 = str(trade.item_id_List[0]) + " Total Value: " + str(sell1)
+trade_item_id_4 = str(trade.item_id_List[3]) + " Total Value: " + str(sell2)
 
 trade_list.append(trade_item_id_1)
 trade_list.append(trade_item_id_2)

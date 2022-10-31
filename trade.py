@@ -3,6 +3,7 @@ import numpy as np
 import extended_trade
 
 filename = input("Enter Name Of General Trade file: ")
+# filename = "GeneralTrade.csv"
 with open(filename) as file:
     trade_reader = csv.DictReader(file)
 
